@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calorie Counter</string>
+
+    <string name="store_username">"com.kevmc.caloriecounter.shared_pref_username</string>
+    <string name="store_password">"com.kevmc.caloriecounter.shared_pref_password</string>
+    <string name="store_checkbox">"com.kevmc.caloriecounter.shared_pref_checkbox</string>
+</resources>
