@@ -3,11 +3,21 @@ package com.kevmc.caloriecounter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RegisterPersonalDetails extends AppCompatActivity {
 
     private TextView welcomeMessage;
+
+    private EditText mName, mAge, mHeight, mWeight, mActivityLevel;
+    private RadioButton genderRadioBtn;
+    private Button registerDetailsBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +33,41 @@ public class RegisterPersonalDetails extends AppCompatActivity {
             String username = bd.getString("username");
             welcomeMessage.setText("Welcome "+username);
         }
+
+        registerDetailsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(mName.getText().toString().equals("") || mAge.getText().toString().equals("") || mHeight.getText().toString().equals("") || mWeight.getText().toString().equals("") || mActivityLevel.getText().toString().equals("")){
+                    resetFields();
+                    fieldsCantBeBlankToast();
+
+                }
+
+            }
+        });
+
+
+    }
+    private void resetFields(){
+        mName.setText("");
+        mAge.setText("");
+        mHeight.setText("");
+        mWeight.setText("");
+        mActivityLevel.setText("");
+    }
+    private void fieldsCantBeBlankToast() {
+        Toast.makeText(this, "Fields cannot be blank. Enter details again.", Toast.LENGTH_SHORT).show();
     }
 
     private void findViewsByIds() {
-        welcomeMessage = findViewById(R.id.register_persoanl_details_welcome_tv);
+        welcomeMessage = findViewById(R.id.register_personal_details_welcome_tv);
+        mName = findViewById(R.id.user_register_name_et);
+        mAge = findViewById(R.id.user_register_age_et);
+        mHeight = findViewById(R.id.user_register_height_et);
+        mWeight = findViewById(R.id.user_register_weight_et);
+        mActivityLevel = findViewById(R.id.user_register_activity_level_et);
+        genderRadioBtn = findViewById(R.id.user_male_radio_btn);
+        registerDetailsBtn = findViewById(R.id.user_register_button);
     }
 }
