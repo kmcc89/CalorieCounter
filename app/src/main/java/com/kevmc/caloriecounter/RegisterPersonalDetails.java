@@ -1,5 +1,6 @@
 package com.kevmc.caloriecounter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,13 +11,21 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class RegisterPersonalDetails extends AppCompatActivity {
+
+    Activity context = this;
 
     private TextView welcomeMessage;
 
     private EditText mName, mAge, mHeight, mWeight, mActivityLevel;
     private RadioButton genderRadioBtn;
     private Button registerDetailsBtn;
+
+    private SharedPreferenceClass sharedPreferenceClass;
+    private Gson gson;
 
 
     @Override
@@ -42,13 +51,42 @@ public class RegisterPersonalDetails extends AppCompatActivity {
                     resetFields();
                     fieldsCantBeBlankToast();
 
+                }else{
+
+                    String name = mName.getText().toString();
+                    int age = Integer.valueOf(mAge.getText().toString());
+                    float userHeight = Float.valueOf(mHeight.getText().toString());
+                    float userWeight = Float.valueOf(mWeight.getText().toString());
+                    boolean isMale = Boolean.valueOf(genderRadioBtn.isChecked());
+                    int activityLevel = Integer.valueOf(mActivityLevel.getText().toString());
+
+                    User userToReg = new User(name, age, userHeight, userWeight, isMale, activityLevel);
+
+                    gson = new GsonBuilder().create();
+                    sharedPreferenceClass = new SharedPreferenceClass();
+
+                    String jsonString = gson.toJson(userToReg);
+
+                    sharedPreferenceClass.saveUser(context, jsonString);
+
+                    personalDetailsRegistered();
+
+                    Intent home_page = new Intent(RegisterPersonalDetails.this, HomePage.class);
+                    home_page.putExtra("username", name);
+                    startActivity(home_page);
                 }
+
 
             }
         });
 
 
     }
+
+    private void personalDetailsRegistered() {
+        Toast.makeText(this, "Personal Details Successfully Registered", Toast.LENGTH_SHORT).show();
+    }
+
     private void resetFields(){
         mName.setText("");
         mAge.setText("");

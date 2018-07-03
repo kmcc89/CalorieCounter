@@ -5,34 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.TextView;
 
-public class HomePage extends AppCompatActivity {
-
-    private TextView welcomeTv, calorieAllowanceDisplay;
-
-    private Button accountBtn, calorieCounterBtn, foodBtn, activityBtn, resourcesBtn;
-    
+public class ActivitiesMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-
-        findViewsByIds();
-
-        Intent intent = getIntent();
-        Bundle bd = intent.getExtras();
-
-        if(bd != null){
-            String username = bd.getString("username");
-            welcomeTv.setText(username);
-        }
-    }
-
-    private void findViewsByIds() {
-        welcomeTv = findViewById(R.id.display_name_tv);
+        setContentView(R.layout.activity_activities_main);
     }
 
     @Override
@@ -49,27 +28,27 @@ public class HomePage extends AppCompatActivity {
 
         if(id == R.id.home){
 
-            Intent home = new Intent(HomePage.this, HomePage.class);
+            Intent home = new Intent(ActivitiesMain.this, HomePage.class);
             startActivity(home);
 
         }else if(id == R.id.calorie_counter){
 
-            Intent calorie_counter = new Intent(HomePage.this, CalorieCounter.class);
+            Intent calorie_counter = new Intent(ActivitiesMain.this, CalorieCounter.class);
             startActivity(calorie_counter);
 
         }else if(id == R.id.food){
 
-            Intent food_section = new Intent(HomePage.this, FoodMain.class);
+            Intent food_section = new Intent(ActivitiesMain.this, FoodMain.class);
             startActivity(food_section);
 
         }else if(id == R.id.activities){
 
-            Intent activity_section = new Intent(HomePage.this, ActivitiesMain.class);
+            Intent activity_section = new Intent(ActivitiesMain.this, ActivitiesMain.class);
             startActivity(activity_section);
 
         }else if(id == R.id.resources){
 
-            Intent resource_section = new Intent(HomePage.this, ResourcesMain.class);
+            Intent resource_section = new Intent(ActivitiesMain.this, ResourcesMain.class);
             startActivity(resource_section);
 
         }else if(id == R.id.exit){
@@ -79,6 +58,4 @@ public class HomePage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
-
-
 }

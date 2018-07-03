@@ -21,7 +21,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterCredentials" />
         <activity android:name=".RegisterPersonalDetails" />
-        <activity android:name=".HomePage"></activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".CalorieCounter" />
+        <activity android:name=".FoodMain" />
+        <activity android:name=".ActivitiesMain" />
+        <activity android:name=".ResourcesMain"></activity>
     </application>
 
 </manifest>
