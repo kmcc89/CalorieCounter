@@ -27,7 +27,9 @@
         <activity android:name=".ActivitiesMain" />
         <activity android:name=".ResourcesMain" />
         <activity android:name=".UserAccount" />
-        <activity android:name=".EditUserDetails"></activity>
+        <activity android:name=".EditUserDetails" />
+        <activity android:name=".AddFood" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>

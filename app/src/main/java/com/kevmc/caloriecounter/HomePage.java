@@ -14,12 +14,14 @@ public class HomePage extends AppCompatActivity {
 
     private TextView welcomeTv, calorieAllowanceDisplay;
 
-    private Button accountBtn, calorieCounterBtn, foodBtn, activityBtn, resourcesBtn;
+    private Button accountBtn, addFoodBtn, addActivityBtn, foodBtn, activityBtn, resourcesBtn;
 
     private String name;
     private int age, activityLevel;
     private float userHeight, userWeight;
     private boolean isMale;
+
+    float todaysAllowance;
 
     private SharedPreferenceClass sharedPreferenceClass;
     private User user;
@@ -43,11 +45,18 @@ public class HomePage extends AppCompatActivity {
 
         user = new User(name, age, userHeight, userWeight, isMale, activityLevel);
 
+        todaysAllowance = sharedPreferenceClass.getSharedPrefTodayAllowance(this);
+
         user.calculateBMR();
         user.calculateTEE();
 
+        if(todaysAllowance == 1){
+            todaysAllowance = user.getUserTEE();
+            sharedPreferenceClass.saveSharedPrefTodayAllowance(this, todaysAllowance);
+        }
+
         welcomeTv.setText(name);
-        calorieAllowanceDisplay.setText(String.valueOf(user.getUserTEE()));
+        calorieAllowanceDisplay.setText(String.valueOf(todaysAllowance));
 
         accountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +65,30 @@ public class HomePage extends AppCompatActivity {
                 startActivity(account_intent);
             }
         });
+
+        addFoodBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent add_food_intent = new Intent(HomePage.this, AddFood.class);
+                startActivity(add_food_intent);
+            }
+        });
+
+        addActivityBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent add_activity_intent = new Intent(HomePage.this, AddActivity.class);
+                startActivity(add_activity_intent);
+            }
+        });
     }
 
     private void findViewsByIds() {
         welcomeTv = findViewById(R.id.display_name_tv);
         calorieAllowanceDisplay = findViewById(R.id.display_cal_allowance_tv);
         accountBtn = findViewById(R.id.account_button);
-        calorieCounterBtn = findViewById(R.id.calorie_couter_button);
+        addFoodBtn = findViewById(R.id.add_food_btn);
+        addActivityBtn = findViewById(R.id.add_activity_btn);
         foodBtn = findViewById(R.id.food_button);
         activityBtn = findViewById(R.id.activities_button);
         resourcesBtn = findViewById(R.id.resources_button);

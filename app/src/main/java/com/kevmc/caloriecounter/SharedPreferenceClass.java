@@ -46,6 +46,9 @@ public class SharedPreferenceClass {
     public static final String DETAILS_PREF_ACTIVITY_LEVEL = "USER_ACTIVITY_LEVEL";
     public static final String DETAILS_PREF_ACTIVITY_LEVEL_KEY = "USER_ACTIVITY_LEVEL_KEY";
 
+    public static final String TODAY_ALLOWANCE_SHARED_PREF_NAME = "USER_DAY_ALLOWANCE";
+    public static final String TODAY_ALLOWANCE_SHARED_PREF_KEY = "USER_DAY_ALLOWANCE_KEY";
+
 
     public SharedPreferenceClass(){
         super();
@@ -190,6 +193,19 @@ public class SharedPreferenceClass {
         mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_ACTIVITY_LEVEL, Context.MODE_PRIVATE);
         int activityLevel = mSharedPreferences.getInt(DETAILS_PREF_ACTIVITY_LEVEL_KEY, 1);
         return activityLevel;
+    }
+
+    public void saveSharedPrefTodayAllowance(Context context, float todayAllowance){
+        mSharedPreferences = context.getSharedPreferences(TODAY_ALLOWANCE_SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putFloat(TODAY_ALLOWANCE_SHARED_PREF_KEY, todayAllowance);
+        editor.commit();
+    }
+
+    public float getSharedPrefTodayAllowance(Context context){
+        mSharedPreferences = context.getSharedPreferences(TODAY_ALLOWANCE_SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        float todayAllowance = mSharedPreferences.getFloat(TODAY_ALLOWANCE_SHARED_PREF_KEY, 1);
+        return todayAllowance;
     }
 
 

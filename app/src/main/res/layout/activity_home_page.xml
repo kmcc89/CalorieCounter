@@ -7,18 +7,6 @@
     tools:context="com.kevmc.caloriecounter.HomePage">
 
     <Button
-        android:id="@+id/calorie_couter_button"
-        android:layout_width="234dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/food_button"
-        android:layout_alignLeft="@+id/food_button"
-        android:layout_alignStart="@+id/food_button"
-        android:layout_marginBottom="23dp"
-        android:text="@string/calorie_counter"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="209dp" />
-
-    <Button
         android:id="@+id/food_button"
         android:layout_width="234dp"
         android:layout_height="40dp"
@@ -82,9 +70,9 @@
         android:id="@+id/display_cal_allowance_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/calorie_couter_button"
+        android:layout_below="@+id/tv_cal_allowance_tag"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="58dp"
+        android:layout_marginTop="20sp"
         android:text="TextView"
         android:textColor="@color/colorAccent"
         android:textSize="36sp" />
@@ -97,4 +85,21 @@
         android:layout_centerHorizontal="true"
         android:text="Calorie Allowance"
         android:textColor="@android:color/holo_blue_bright" />
+
+    <Button
+        android:id="@+id/add_food_btn"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/food_button"
+        android:layout_marginTop="184dp"
+        android:text="Add Food" />
+
+    <Button
+        android:id="@+id/add_activity_btn"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/food_button"
+        android:layout_alignTop="@+id/add_food_btn"
+        android:text="Add Activity" />
 </RelativeLayout>
