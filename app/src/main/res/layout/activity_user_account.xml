@@ -186,9 +186,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="28sp"
-        android:layout_toEndOf="@+id/user_account_activity_level_tv"
-        android:text="Edit Details"
-        android:layout_toRightOf="@+id/user_account_activity_level_tv" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="57dp"
+        android:text="Edit Details" />
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/user_account_activity_level_tv"
+        android:layout_alignTop="@+id/edit_details_btn"
+        android:text="Home" />
 
 </RelativeLayout>

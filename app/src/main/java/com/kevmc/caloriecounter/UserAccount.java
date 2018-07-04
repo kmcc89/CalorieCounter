@@ -1,7 +1,10 @@
 package com.kevmc.caloriecounter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class UserAccount extends AppCompatActivity {
@@ -11,6 +14,7 @@ public class UserAccount extends AppCompatActivity {
     private SharedPreferenceClass sharedPreferenceClass;
 
     private User user;
+    private Button homeBtn, editBtn;
 
     private String name;
     private int age, activityLevel;
@@ -44,7 +48,25 @@ public class UserAccount extends AppCompatActivity {
         tee = user.getUserTEE();
 
         setUserDetails();
-    }
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent home_intent = new Intent(UserAccount.this, HomePage.class);
+                startActivity(home_intent);
+            }
+        });
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent edit_intent = new Intent(UserAccount.this, EditUserDetails.class);
+                startActivity(edit_intent);
+            }
+        });
+
+
+    }//ON CREATE METHOD
 
     private void findViewsByIds() {
         nameTv = findViewById(R.id.user_account_user_name_tv);
@@ -55,6 +77,8 @@ public class UserAccount extends AppCompatActivity {
         bmrTv = findViewById(R.id.user_account_user_bmr_tv);
         activityLevelTv = findViewById(R.id.user_account_user_activity_level_tv);
         teeTv = findViewById(R.id.user_account_user_tee_tv);
+        homeBtn = findViewById(R.id.home_btn);
+        editBtn = findViewById(R.id.edit_details_btn);
     }
 
     private void setUserDetails(){

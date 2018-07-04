@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserDetails">
+
+    <TextView
+        android:id="@+id/edit_personal_details_welcome_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13sp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/edit_welcome_msg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_personal_details_welcome_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12sp"
+        android:text="Edit Your Personal Details" />
+
+    <TextView
+        android:id="@+id/user_edit_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_welcome_msg_tv"
+        android:layout_marginTop="34sp"
+        android:layout_marginLeft="60sp"
+        android:text="Name"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/user_edit_name_et"
+        android:layout_width="120sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/user_edit_age_tv"
+        android:layout_alignEnd="@+id/edit_welcome_msg_tv"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/user_edit_age_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_edit_name_tv"
+        android:layout_alignRight="@+id/user_edit_name_tv"
+        android:layout_marginTop="20sp"
+        android:text="Age"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/user_edit_age_et"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_age_tv"
+        android:layout_alignLeft="@+id/user_edit_name_et"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/user_edit_height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_edit_age_tv"
+        android:layout_alignRight="@+id/user_edit_name_tv"
+        android:layout_marginTop="20sp"
+        android:text="Height"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/user_edit_height_et"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_height_tv"
+        android:layout_alignLeft="@+id/user_edit_name_et"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/user_edit_weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_edit_height_tv"
+        android:layout_alignRight="@+id/user_edit_name_tv"
+        android:layout_marginTop="20sp"
+        android:text="Weight"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/user_edit_weight_et"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_weight_tv"
+        android:layout_alignLeft="@+id/user_edit_name_et"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/user_edit_activity_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_edit_weight_tv"
+        android:layout_alignRight="@+id/user_edit_name_tv"
+        android:layout_marginTop="20sp"
+        android:text="Activity Level"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/user_edit_activity_level_et"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_activity_level_tv"
+        android:layout_alignLeft="@+id/user_edit_name_et"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/user_edit_button"
+        android:layout_width="400sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Confirm Details" />
+
+    <TextView
+        android:id="@+id/cm_tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_height_et"
+        android:layout_toEndOf="@+id/user_edit_height_et"
+        android:text="Cm" />
+
+    <TextView
+        android:id="@+id/kg_tag_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_weight_et"
+        android:layout_alignEnd="@+id/cm_tag_tv"
+        android:text="Kg" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_edit_activity_level_et"
+        android:layout_toEndOf="@+id/user_edit_weight_et"
+        android:text="Enter a value from 1 - 5"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

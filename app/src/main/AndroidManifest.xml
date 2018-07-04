@@ -26,7 +26,8 @@
         <activity android:name=".FoodMain" />
         <activity android:name=".ActivitiesMain" />
         <activity android:name=".ResourcesMain" />
-        <activity android:name=".UserAccount"></activity>
+        <activity android:name=".UserAccount" />
+        <activity android:name=".EditUserDetails"></activity>
     </application>
 
 </manifest>
