@@ -24,8 +24,27 @@ public class SharedPreferenceClass {
 
     public static final String USER_CRED_PREF_NAME = "USER_CRED_PREF";
     public static final String USER_CRED_PREF_KEY = "USER_CRED_KEY";
+
     public static final String PASS_CRED_PREF_NAME = "PASS_CRED_PREF";
     public static final String PASS_CRED_PREF_KEY = "PASS_CRED_KEY";
+
+    public static final String DETAILS_PREF_NAME = "USER_NAME";
+    public static final String DETAILS_PREF_NAME_KEY = "USER_NAME_KEY";
+
+    public static final String DETAILS_PREF_AGE = "USER_AGE";
+    public static final String DETAILS_PREF_AGE_KEY = "USER_AGE_KEY";
+
+    public static final String DETAILS_PREF_HEIGHT = "USER_HEIGHT";
+    public static final String DETAILS_PREF_HEIGHT_KEY = "USER_HEIGHT_KEY";
+
+    public static final String DETAILS_PREF_WEIGHT = "USER_WEIGHT";
+    public static final String DETAILS_PREF_WEIGHT_KEY = "USER_WEIGHT_KEY";
+
+    public static final String DETAILS_PREF_GENDER = "USER_GENDER";
+    public static final String DETAILS_PREF_GENDER_KEY = "USER_GENDER_KEY";
+
+    public static final String DETAILS_PREF_ACTIVITY_LEVEL = "USER_ACTIVITY_LEVEL";
+    public static final String DETAILS_PREF_ACTIVITY_LEVEL_KEY = "USER_ACTIVITY_LEVEL_KEY";
 
 
     public SharedPreferenceClass(){
@@ -93,6 +112,84 @@ public class SharedPreferenceClass {
         String passwordString = mSharedPreferences.getString(PASS_CRED_PREF_KEY, "");
 
         return passwordString;
+    }
+
+    public void saveSharedPrefName(Context context, String name){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putString(DETAILS_PREF_NAME_KEY, name);
+        editor.commit();
+    }
+
+    public String getSharedPrefName(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_NAME, Context.MODE_PRIVATE);
+        String name = mSharedPreferences.getString(DETAILS_PREF_NAME_KEY, "");
+        return name;
+    }
+
+    public void saveSharedPrefAge(Context context, int age){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_AGE, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putInt(DETAILS_PREF_AGE_KEY, age);
+        editor.commit();
+    }
+
+    public int getSharedPrefAge(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_AGE, Context.MODE_PRIVATE);
+        int age = mSharedPreferences.getInt(DETAILS_PREF_AGE_KEY, 0);
+        return age;
+    }
+
+    public void saveSharedPrefHeight(Context context, float height){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_HEIGHT, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putFloat(DETAILS_PREF_HEIGHT_KEY, height);
+        editor.commit();
+    }
+
+    public float getSharedPrefHeight(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_HEIGHT, Context.MODE_PRIVATE);
+        float height = mSharedPreferences.getFloat(DETAILS_PREF_HEIGHT_KEY, 0);
+        return height;
+    }
+
+    public void saveSharedPrefWeight(Context context, float weight){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_WEIGHT, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putFloat(DETAILS_PREF_WEIGHT_KEY, weight);
+        editor.commit();
+    }
+
+    public float getSharedPrefWeight(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_WEIGHT, Context.MODE_PRIVATE);
+        float weight = mSharedPreferences.getFloat(DETAILS_PREF_WEIGHT_KEY, 0);
+        return weight;
+    }
+
+    public void saveSharedPrefGender(Context context, boolean isMale){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_GENDER, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putBoolean(DETAILS_PREF_GENDER_KEY, isMale);
+        editor.commit();
+    }
+
+    public boolean getSharedPrefGender(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_GENDER, Context.MODE_PRIVATE);
+        boolean isMale = mSharedPreferences.getBoolean(DETAILS_PREF_GENDER_KEY, true);
+        return isMale;
+    }
+
+    public void saveSharedPrefActivityLevel(Context context, int activityLevel){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_ACTIVITY_LEVEL, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putInt(DETAILS_PREF_ACTIVITY_LEVEL_KEY, activityLevel);
+        editor.commit();
+    }
+
+    public int getSharedPrefActivityLevel(Context context){
+        mSharedPreferences = context.getSharedPreferences(DETAILS_PREF_ACTIVITY_LEVEL, Context.MODE_PRIVATE);
+        int activityLevel = mSharedPreferences.getInt(DETAILS_PREF_ACTIVITY_LEVEL_KEY, 1);
+        return activityLevel;
     }
 
 

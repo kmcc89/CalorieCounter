@@ -1,6 +1,7 @@
 package com.kevmc.caloriecounter;
 
 import android.content.Intent;
+import android.print.PrinterId;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,6 +14,14 @@ public class HomePage extends AppCompatActivity {
     private TextView welcomeTv, calorieAllowanceDisplay;
 
     private Button accountBtn, calorieCounterBtn, foodBtn, activityBtn, resourcesBtn;
+
+    private String name;
+    private int age, activityLevel;
+    private float userHeight, userWeight;
+    private boolean isMale;
+
+    private SharedPreferenceClass sharedPreferenceClass;
+    private User user;
     
 
     @Override
@@ -22,17 +31,32 @@ public class HomePage extends AppCompatActivity {
 
         findViewsByIds();
 
-        Intent intent = getIntent();
-        Bundle bd = intent.getExtras();
+        sharedPreferenceClass = new SharedPreferenceClass();
 
-        if(bd != null){
-            String username = bd.getString("username");
-            welcomeTv.setText(username);
-        }
+        name = sharedPreferenceClass.getSharedPrefName(this);
+        age = sharedPreferenceClass.getSharedPrefAge(this);
+        userHeight = sharedPreferenceClass.getSharedPrefHeight(this);
+        userWeight = sharedPreferenceClass.getSharedPrefWeight(this);
+        isMale = sharedPreferenceClass.getSharedPrefGender(this);
+        activityLevel = sharedPreferenceClass.getSharedPrefActivityLevel(this);
+
+        user = new User(name, age, userHeight, userWeight, isMale, activityLevel);
+
+        user.calculateBMR();
+        user.calculateTEE();
+
+        welcomeTv.setText(name);
+        calorieAllowanceDisplay.setText(String.valueOf(user.getUserTEE()));
     }
 
     private void findViewsByIds() {
         welcomeTv = findViewById(R.id.display_name_tv);
+        calorieAllowanceDisplay = findViewById(R.id.display_cal_allowance_tv);
+        accountBtn = findViewById(R.id.account_button);
+        calorieCounterBtn = findViewById(R.id.calorie_couter_button);
+        foodBtn = findViewById(R.id.food_button);
+        activityBtn = findViewById(R.id.activities_button);
+        resourcesBtn = findViewById(R.id.resources_button);
     }
 
     @Override

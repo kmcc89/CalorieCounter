@@ -25,8 +25,6 @@ public class RegisterPersonalDetails extends AppCompatActivity {
     private Button registerDetailsBtn;
 
     private SharedPreferenceClass sharedPreferenceClass;
-    private Gson gson;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,28 +58,33 @@ public class RegisterPersonalDetails extends AppCompatActivity {
                     boolean isMale = Boolean.valueOf(genderRadioBtn.isChecked());
                     int activityLevel = Integer.valueOf(mActivityLevel.getText().toString());
 
-                    User userToReg = new User(name, age, userHeight, userWeight, isMale, activityLevel);
-
-                    gson = new GsonBuilder().create();
                     sharedPreferenceClass = new SharedPreferenceClass();
 
-                    String jsonString = gson.toJson(userToReg);
+                    sharedPreferenceClass.saveSharedPrefName(context, name);
+                    sharedPreferenceClass.saveSharedPrefAge(context, age);
+                    sharedPreferenceClass.saveSharedPrefHeight(context, userHeight);
+                    sharedPreferenceClass.saveSharedPrefWeight(context, userWeight);
+                    sharedPreferenceClass.saveSharedPrefGender(context, isMale);
+                    sharedPreferenceClass.saveSharedPrefActivityLevel(context, activityLevel);
 
-                    sharedPreferenceClass.saveUser(context, jsonString);
+//                    User userToReg = new User(name, age, userHeight, userWeight, isMale, activityLevel);
+//
+//                    gson = new GsonBuilder().create();
+//                    sharedPreferenceClass = new SharedPreferenceClass();
+//
+//                    String jsonString = gson.toJson(userToReg);
+//
+//                    sharedPreferenceClass.saveUser(context, jsonString);
 
                     personalDetailsRegistered();
 
                     Intent home_page = new Intent(RegisterPersonalDetails.this, HomePage.class);
-                    home_page.putExtra("username", name);
                     startActivity(home_page);
                 }
-
-
             }
         });
 
-
-    }
+    }//ON CREATE METHOD
 
     private void personalDetailsRegistered() {
         Toast.makeText(this, "Personal Details Successfully Registered", Toast.LENGTH_SHORT).show();
