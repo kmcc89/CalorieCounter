@@ -199,4 +199,40 @@
         android:layout_alignTop="@+id/edit_details_btn"
         android:text="Home" />
 
+    <TextView
+        android:id="@+id/height_cm_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_account_height_tv"
+        android:layout_toEndOf="@+id/user_account_user_name_tv"
+        android:layout_marginLeft="5sp"
+        android:text="cm" />
+
+    <TextView
+        android:id="@+id/weight_kg_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_account_weight_tv"
+        android:layout_toEndOf="@id/user_account_user_weight_tv"
+        android:layout_marginLeft="5sp"
+        android:text="kg"/>
+
+    <TextView
+        android:id="@+id/bmr_cal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_account_user_bmr_tv"
+        android:layout_toEndOf="@id/user_account_user_bmr_tv"
+        android:layout_marginLeft="5sp"
+        android:text="kcal"/>
+
+    <TextView
+        android:id="@+id/tee_cal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_account_user_tee_tv"
+        android:layout_toEndOf="@id/user_account_user_tee_tv"
+        android:layout_marginLeft="5sp"
+        android:text="kcal"/>
+
 </RelativeLayout>
