@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -47,6 +48,14 @@ public class HomePage extends AppCompatActivity {
 
         welcomeTv.setText(name);
         calorieAllowanceDisplay.setText(String.valueOf(user.getUserTEE()));
+
+        accountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent account_intent = new Intent(HomePage.this, UserAccount.class);
+                startActivity(account_intent);
+            }
+        });
     }
 
     private void findViewsByIds() {

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAccount">
+
+    <TextView
+        android:id="@+id/user_account_header_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="User Personal Details"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_header_tv"
+        android:layout_alignStart="@+id/user_account_header_tv"
+        android:layout_below="@+id/user_account_header_tv"
+        android:layout_marginTop="36sp"
+        android:text="Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_age_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_name_tv"
+        android:layout_alignRight="@+id/user_account_name_tv"
+        android:layout_below="@+id/user_account_name_tv"
+        android:layout_marginTop="20sp"
+        android:text="Age"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_age_tv"
+        android:layout_alignRight="@+id/user_account_age_tv"
+        android:layout_below="@+id/user_account_age_tv"
+        android:layout_marginTop="20sp"
+        android:text="Heght"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_height_tv"
+        android:layout_alignRight="@+id/user_account_height_tv"
+        android:layout_below="@+id/user_account_height_tv"
+        android:layout_marginTop="20sp"
+        android:text="Weight"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_bmi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_weight_tv"
+        android:layout_alignRight="@+id/user_account_weight_tv"
+        android:layout_below="@+id/user_account_weight_tv"
+        android:layout_marginTop="21sp"
+        android:text="BMI"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_bmr_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_bmi_tv"
+        android:layout_alignRight="@+id/user_account_bmi_tv"
+        android:layout_below="@+id/user_account_bmi_tv"
+        android:layout_marginTop="22sp"
+        android:text="BMR"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_activity_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/user_account_bmr_tv"
+        android:layout_alignRight="@+id/user_account_bmr_tv"
+        android:layout_below="@+id/user_account_bmr_tv"
+        android:layout_marginTop="20sp"
+        android:text="Activity Level"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_tee_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_account_activity_level_tv"
+        android:layout_alignEnd="@+id/user_account_activity_level_tv"
+        android:layout_alignRight="@+id/user_account_activity_level_tv"
+        android:layout_marginTop="20sp"
+        android:text="TEE"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_account_user_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/user_account_age_tv"
+        android:layout_marginLeft="23sp"
+        android:layout_marginStart="23sp"
+        android:layout_toEndOf="@+id/user_account_name_tv"
+        android:layout_toRightOf="@+id/user_account_name_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_age_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_name_tv"
+        android:layout_alignStart="@+id/user_account_user_name_tv"
+        android:layout_alignTop="@+id/user_account_age_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_height_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_age_tv"
+        android:layout_alignStart="@+id/user_account_user_age_tv"
+        android:layout_alignTop="@+id/user_account_height_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_height_tv"
+        android:layout_alignStart="@+id/user_account_user_height_tv"
+        android:layout_alignTop="@+id/user_account_weight_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_bmi_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_weight_tv"
+        android:layout_alignStart="@+id/user_account_user_weight_tv"
+        android:layout_alignTop="@+id/user_account_bmi_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_bmr_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_bmi_tv"
+        android:layout_alignStart="@+id/user_account_user_bmi_tv"
+        android:layout_alignTop="@+id/user_account_bmr_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_activity_level_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_bmr_tv"
+        android:layout_alignStart="@+id/user_account_user_bmr_tv"
+        android:layout_alignTop="@+id/user_account_activity_level_tv"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/user_account_user_tee_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_account_user_activity_level_tv"
+        android:layout_alignStart="@+id/user_account_user_activity_level_tv"
+        android:layout_alignTop="@+id/user_account_tee_tv"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/edit_details_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28sp"
+        android:layout_toEndOf="@+id/user_account_activity_level_tv"
+        android:text="Edit Details"
+        android:layout_toRightOf="@+id/user_account_activity_level_tv" />
+
+</RelativeLayout>

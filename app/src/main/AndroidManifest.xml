@@ -25,7 +25,8 @@
         <activity android:name=".CalorieCounter" />
         <activity android:name=".FoodMain" />
         <activity android:name=".ActivitiesMain" />
-        <activity android:name=".ResourcesMain"></activity>
+        <activity android:name=".ResourcesMain" />
+        <activity android:name=".UserAccount"></activity>
     </application>
 
 </manifest>

@@ -75,7 +75,8 @@
         android:layout_alignTop="@+id/account_button"
         android:layout_marginLeft="33dp"
         android:layout_marginStart="33dp"
-        android:text="name display" />
+        android:text="name display"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/display_cal_allowance_tv"
