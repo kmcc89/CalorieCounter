@@ -1,9 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.kevmc.caloriecounter.ResourcesMain">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.kevmc.caloriecounter.ResourcesMain">
+
+        <TextView
+            android:id="@+id/foodResourcesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/resourceLink2"
+            android:layout_alignStart="@+id/resourceLink2"
+            android:layout_below="@+id/appBarLayout3"
+            android:layout_marginTop="22dp"
+            android:text="Nutrition"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/resourceLink1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/foodResourcesHeader"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 1" />
+
+
+        <TextView
+            android:id="@+id/resourceLink2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 2" />
+
+        <TextView
+            android:id="@+id/resourceLink3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 3" />
+
+        <TextView
+            android:id="@+id/resourceLink4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 4"/>
+
+        <TextView
+            android:id="@+id/activityResourcesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/resourceLink2"
+            android:layout_alignStart="@+id/resourceLink2"
+            android:layout_below="@+id/resourceLink4"
+            android:layout_marginTop="22dp"
+            android:text="Activity"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/resourceLink5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activityResourcesHeader"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 5" />
+
+
+        <TextView
+            android:id="@+id/resourceLink6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 6" />
+
+        <TextView
+            android:id="@+id/resourceLink7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink6"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 7" />
+
+        <TextView
+            android:id="@+id/generalResourcesHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/resourceLink2"
+            android:layout_alignStart="@+id/resourceLink2"
+            android:layout_below="@+id/resourceLink7"
+            android:layout_marginTop="22dp"
+            android:text="General"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/resourceLink8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/generalResourcesHeader"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 8" />
+
+
+        <TextView
+            android:id="@+id/resourceLink9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink8"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 9" />
+
+        <TextView
+            android:id="@+id/resourceLink10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resourceLink9"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="External resource link 10" />
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
+
+

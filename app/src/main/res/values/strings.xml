@@ -14,4 +14,29 @@
     <string name="exit">Exit</string>
 
     <string name="account">Account</string>
+
+    <string name="Resource_Link_Description_BBC_GoodFood">Click on this link to visit BBC Foods and see the foods available there</string>
+    <string name="Resource_Link__Description_Nutrition.gov">Visit Nutrition.gov, a USDA sponsored website offering credible nutritional advice and information</string>
+    <string name="Resource_Link_Description_MyFitnessPal_Food_Database">Click this link to view an extensive, collaboratively produced database containing information
+    on the nutritional values of thousands of foods</string>
+    <string name="Resource_Link_Description_BordBia">Visit the Bord Bia website to easily source information about food and drink products from Ireland</string>
+    <string name="Resource_Link_Description_World_Health_Organisation">Find information about general physical activity guidelines from the World Health Organisation\'s Global Strategy on Diet, Physical Activity and Health</string>
+    <string name="Resource_Link_Description_Health_ie">Read about physical activity guidelines set out by the Irish Health Department for children, adults and people with disabilities.</string>
+    <string name="Resource_Link_Description_Health_Status_Energy_Expend_Calculator">Visit HealthStatus.com to find information related to energy used during various physical activities including everyday tasks such as driving, reading and talking on the phone</string>
+    <string name="Resource_Link_Description_BMI_Calculator">Calculate your body mass index with this easy to use BMI calculator</string>
+    <string name="Resource_Link_Description_BMR_Calculator">Follow this link to calculate you basal metablolic rate</string>
+    <string name="Resource_Link_Description_FitDay_Fitness_Components">Visit FitDay.com to find information about the 5 main components of fitness</string>
+
+
+    <string name="Resource_Link_BBC_GoodFood"><![CDATA[<a href=\'https://www.bbcgoodfood.com//\'>BBC GoodFood</a><br/>]]></string>
+    <string name="Resource_Link_Nutrition_gov"><![CDATA[<a href=\'https://www.nutrition.gov//\'>Nutrition.gov</a><br/>]]></string>
+    <string name="Resource_Link_MyFitnessPal_Food_Database"><![CDATA[<a href=\'https://www.myfitnesspal.com/food/calorie-chart-nutrition-facts//\'>MyFitnessPal.com</a><br/>]]></string>
+    <string name="Resource_Link_BordBia"><![CDATA[<a href=\'https://www.bordbia.ie/Pages/Default.aspx//\'>Bord Bia</a><br/>]]></string>
+    <string name="Resource_Link_World_Health_Organisation"><![CDATA[<a href=\'http://www.who.int/dietphysicalactivity/factsheet_adults/en///\'>World Health Organisation</a><br/>]]></string>
+    <string name="Resource_Link_Health_ie"><![CDATA[<a href=\'https://health.gov.ie/healthy-ireland/physical-activity/recommended-guidelines///\'>Health.gov.ie</a><br/>]]></string>
+    <string name="Resource_Link_Health_Status_Energy_Expend_Calculator"><![CDATA[<a href=\'https://www.healthstatus.com/calculate/cbc//\'>HealthStatus.com</a><br/>]]></string>
+    <string name="Resource_Link_BMI_Calculator"><![CDATA[<a href=\'https://www.bmicalculator.ie///\'>BMI Calculator</a><br/>]]></string>
+    <string name="Resource_Link_BMR_Calculator"><![CDATA[<a href=\'http://www.bmi-calculator.net/bmr-calculator///\'>BMR Calculator</a><br/>]]></string>
+    <string name="Resource_Link_FitDay_Fitness_Components"><![CDATA[<a href=\'https://www.fitday.com/fitness-articles/fitness/body-building/the-5-components-of-physical-fitness.html//\'>Components of Fitness</a><br/>]]></string>
+
 </resources>
