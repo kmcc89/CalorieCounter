@@ -16,6 +16,9 @@ import java.util.List;
 
 public class SharedPreferenceClass {
 
+    private SharedPreferences mSharedPreferences;
+    private SharedPreferences.Editor editor;
+
     public static final String USER_DETAILS_PREFS_NAME = "USER_DETAILS_PREF";
     public static final String USER_DETAILS_PREFS_KEY = "USER_PREFS_KEY";
 
@@ -31,9 +34,6 @@ public class SharedPreferenceClass {
 
     public void saveUser(Context context, String text){
 
-        SharedPreferences mSharedPreferences;
-        SharedPreferences.Editor editor;
-
         mSharedPreferences = context.getSharedPreferences(USER_DETAILS_PREFS_NAME, Context.MODE_PRIVATE);
         editor = mSharedPreferences.edit();
 
@@ -44,7 +44,6 @@ public class SharedPreferenceClass {
 
     public String getUserObject(Context context){
 
-        SharedPreferences mSharedPreferences;
         String text;
 
         mSharedPreferences = context.getSharedPreferences(USER_DETAILS_PREFS_NAME, Context.MODE_PRIVATE);
@@ -55,9 +54,6 @@ public class SharedPreferenceClass {
     }
 
     public void saveSharedPrefUsername (Context context, String username){
-
-        SharedPreferences mSharedPreferences;
-        SharedPreferences.Editor editor;
 
         mSharedPreferences = context.getSharedPreferences(USER_CRED_PREF_NAME, Context.MODE_PRIVATE);
         editor = mSharedPreferences.edit();
@@ -70,8 +66,6 @@ public class SharedPreferenceClass {
     public String getSharedPrefUsername(Context context){
 
         //Type type = new TypeToken<List<UserLoginCredentials>>(){}.getType();
-
-        SharedPreferences mSharedPreferences;
         mSharedPreferences = context.getSharedPreferences(USER_CRED_PREF_NAME, Context.MODE_PRIVATE);
 
 
@@ -84,9 +78,6 @@ public class SharedPreferenceClass {
 
     public void saveSharedPrefPassword(Context context, String password){
 
-        SharedPreferences mSharedPreferences;
-        SharedPreferences.Editor editor;
-
         mSharedPreferences = context.getSharedPreferences(PASS_CRED_PREF_NAME, Context.MODE_PRIVATE);
         editor = mSharedPreferences.edit();
 
@@ -97,7 +88,6 @@ public class SharedPreferenceClass {
 
     public String getSharedPrefPassword(Context context){
 
-        SharedPreferences mSharedPreferences;
         mSharedPreferences = context.getSharedPreferences(PASS_CRED_PREF_NAME, Context.MODE_PRIVATE);
 
         String passwordString = mSharedPreferences.getString(PASS_CRED_PREF_KEY, "");
