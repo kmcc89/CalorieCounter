@@ -1,5 +1,6 @@
 package com.kevmc.caloriecounter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.print.PrinterId;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +13,11 @@ import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
 
+    private Activity context = this;
+
     private TextView welcomeTv, calorieAllowanceDisplay;
 
-    private Button accountBtn, addFoodBtn, addActivityBtn, foodBtn, activityBtn, resourcesBtn;
+    private Button accountBtn, addFoodBtn, addActivityBtn, foodBtn, activityBtn, resourcesBtn, resetBtn;
 
     private String name;
     private int age, activityLevel;
@@ -58,6 +61,17 @@ public class HomePage extends AppCompatActivity {
         welcomeTv.setText(name);
         calorieAllowanceDisplay.setText(String.valueOf(todaysAllowance));
 
+        resetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user.calculateBMR();
+                user.calculateTEE();
+                todaysAllowance = user.getUserTEE();
+                sharedPreferenceClass.saveSharedPrefTodayAllowance(context, todaysAllowance);
+                calorieAllowanceDisplay.setText(String.valueOf(todaysAllowance));
+            }
+        });
+
         accountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,8 +104,9 @@ public class HomePage extends AppCompatActivity {
         addFoodBtn = findViewById(R.id.add_food_btn);
         addActivityBtn = findViewById(R.id.add_activity_btn);
         foodBtn = findViewById(R.id.food_button);
-        activityBtn = findViewById(R.id.activities_button);
+        //activityBtn = findViewById(R.id.activities_button);
         resourcesBtn = findViewById(R.id.resources_button);
+        resetBtn = findViewById(R.id.reset_and_log_button);
     }
 
     @Override

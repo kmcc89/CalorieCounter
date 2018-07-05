@@ -10,22 +10,22 @@
         android:id="@+id/food_button"
         android:layout_width="234dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/activities_button"
-        android:layout_alignLeft="@+id/activities_button"
-        android:layout_alignStart="@+id/activities_button"
+        android:layout_above="@+id/reset_and_log_button"
+        android:layout_alignLeft="@+id/reset_and_log_button"
+        android:layout_alignStart="@+id/reset_and_log_button"
         android:layout_marginBottom="29dp"
         android:text="@string/food"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="274dp" />
 
     <Button
-        android:id="@+id/activities_button"
+        android:id="@+id/reset_and_log_button"
         android:layout_width="234dp"
         android:layout_height="40dp"
         android:layout_above="@+id/resources_button"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="20dp"
-        android:text="@string/activity"
+        android:text="Reset Clock and Log Day"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="336dp" />
 
