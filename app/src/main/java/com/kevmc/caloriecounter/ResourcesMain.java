@@ -83,6 +83,13 @@ public class ResourcesMain extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed(){
+        Intent home_intent = new Intent(ResourcesMain.this, HomePage.class);
+        startActivity(home_intent);
+        finish();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);

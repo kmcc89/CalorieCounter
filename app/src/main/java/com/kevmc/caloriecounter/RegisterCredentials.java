@@ -35,6 +35,7 @@ public class RegisterCredentials extends AppCompatActivity {
                     savedUsername = username;
                     savedPassword = password;
                     saveUserCredentials();
+                    finish();
                 } else {
 
                     if((username.equals("")) ||  (password.equals("")) || retypedPassword.equals("")){

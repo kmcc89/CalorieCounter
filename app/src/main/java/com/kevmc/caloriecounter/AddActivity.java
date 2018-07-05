@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -40,8 +41,21 @@ public class AddActivity extends AppCompatActivity {
 
                 Intent home_intent = new Intent(AddActivity.this, HomePage.class);
                 startActivity(home_intent);
+                activityAddedToast();
+                finish();
             }
         });
+    }
+
+    private void activityAddedToast() {
+        Toast.makeText(this, "Activity added. Calorie allowance adjusted", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent home_intent = new Intent(AddActivity.this, HomePage.class);
+        startActivity(home_intent);
+        finish();
     }
 
     private void findViewsByIds() {

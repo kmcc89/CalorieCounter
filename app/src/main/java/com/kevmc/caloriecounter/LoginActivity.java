@@ -28,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
     //object of class we created to save and load objects from shared prefs
     private static SharedPreferenceClass sharedPreferenceClass = new SharedPreferenceClass();
 
+    private int flag = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +69,9 @@ public class LoginActivity extends AppCompatActivity {
                             loginSuccessful();
 
                             Intent home_page = new Intent(LoginActivity.this, HomePage.class);
-                            home_page.putExtra("username", sharedPrefUsername);
+                            home_page.putExtra("flag", flag);
                             startActivity(home_page);
+                            finish();
 
                         } else {
                             mPassword.setText("");
@@ -117,9 +120,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent register_credentials = new Intent(LoginActivity.this, RegisterCredentials.class);
                 startActivity(register_credentials);
-
             }
         });//REGISTER BTN ON CLICK LISTENER
+
+
     }//ON CREATE METHOD
 
     private void noUserRegisteredToast() {

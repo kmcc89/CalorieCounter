@@ -11,9 +11,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 public class RegisterPersonalDetails extends AppCompatActivity {
 
     Activity context = this;
@@ -25,6 +22,8 @@ public class RegisterPersonalDetails extends AppCompatActivity {
     private Button registerDetailsBtn;
 
     private SharedPreferenceClass sharedPreferenceClass;
+
+    private int flag = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +54,7 @@ public class RegisterPersonalDetails extends AppCompatActivity {
                     int age = Integer.valueOf(mAge.getText().toString());
                     float userHeight = Float.valueOf(mHeight.getText().toString());
                     float userWeight = Float.valueOf(mWeight.getText().toString());
-                    boolean isMale = Boolean.valueOf(genderRadioBtn.isChecked());
+                    boolean isMale = genderRadioBtn.isChecked();
                     int activityLevel = Integer.valueOf(mActivityLevel.getText().toString());
 
                     sharedPreferenceClass = new SharedPreferenceClass();
@@ -67,19 +66,12 @@ public class RegisterPersonalDetails extends AppCompatActivity {
                     sharedPreferenceClass.saveSharedPrefGender(context, isMale);
                     sharedPreferenceClass.saveSharedPrefActivityLevel(context, activityLevel);
 
-//                    User userToReg = new User(name, age, userHeight, userWeight, isMale, activityLevel);
-//
-//                    gson = new GsonBuilder().create();
-//                    sharedPreferenceClass = new SharedPreferenceClass();
-//
-//                    String jsonString = gson.toJson(userToReg);
-//
-//                    sharedPreferenceClass.saveUser(context, jsonString);
-
                     personalDetailsRegistered();
 
                     Intent home_page = new Intent(RegisterPersonalDetails.this, HomePage.class);
+                    home_page.putExtra("flag", flag);
                     startActivity(home_page);
+                    finish();
                 }
             }
         });

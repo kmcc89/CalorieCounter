@@ -23,6 +23,8 @@ public class EditUserDetails extends AppCompatActivity {
 
     private Button confirmEditBtn;
 
+    private int flag = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +64,10 @@ public class EditUserDetails extends AppCompatActivity {
 
                 detailsEditedToast();
 
-                Intent account_intent = new Intent(EditUserDetails.this, UserAccount.class);
-                startActivity(account_intent);
+                Intent home_intent = new Intent(EditUserDetails.this, HomePage.class);
+                home_intent.putExtra("flag", flag);
+                startActivity(home_intent);
+                finish();
             }
         });
 

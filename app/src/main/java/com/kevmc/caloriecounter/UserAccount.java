@@ -54,6 +54,7 @@ public class UserAccount extends AppCompatActivity {
             public void onClick(View v) {
                 Intent home_intent = new Intent(UserAccount.this, HomePage.class);
                 startActivity(home_intent);
+                finish();
             }
         });
 
@@ -62,11 +63,19 @@ public class UserAccount extends AppCompatActivity {
             public void onClick(View v) {
                 Intent edit_intent = new Intent(UserAccount.this, EditUserDetails.class);
                 startActivity(edit_intent);
+                finish();
             }
         });
 
 
     }//ON CREATE METHOD
+
+    @Override
+    public void onBackPressed(){
+        Intent home_intent = new Intent(UserAccount.this, HomePage.class);
+        startActivity(home_intent);
+        finish();
+    }
 
     private void findViewsByIds() {
         nameTv = findViewById(R.id.user_account_user_name_tv);

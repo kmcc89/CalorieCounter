@@ -11,19 +11,25 @@
     <item
         android:id="@+id/calorie_counter"
         android:orderInCategory="100"
-        android:title="@string/calorie_counter"
+        android:title="@string/add_food"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/food"
         android:orderInCategory="100"
-        android:title="@string/food"
+        android:title="@string/add_activity"
         app:showAsAction="never"/>
 
     <item
         android:id="@+id/activities"
         android:orderInCategory="100"
-        android:title="@string/activity"
+        android:title="@string/day_breakdown"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/records"
+        android:orderInCategory="100"
+        android:title="@string/records"
         app:showAsAction="never"/>
 
     <item

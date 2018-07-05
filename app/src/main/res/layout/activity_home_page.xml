@@ -7,14 +7,13 @@
     tools:context="com.kevmc.caloriecounter.HomePage">
 
     <Button
-        android:id="@+id/food_button"
+        android:id="@+id/day_breakdown_btn"
         android:layout_width="234dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/reset_and_log_button"
-        android:layout_alignLeft="@+id/reset_and_log_button"
-        android:layout_alignStart="@+id/reset_and_log_button"
-        android:layout_marginBottom="29dp"
-        android:text="@string/food"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="211dp"
+        android:text="@string/day_breakdown"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="274dp" />
 
@@ -22,9 +21,9 @@
         android:id="@+id/reset_and_log_button"
         android:layout_width="234dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/resources_button"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="146dp"
         android:text="Reset Clock and Log Day"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="336dp" />
@@ -35,7 +34,7 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/resources"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="402dp" />
@@ -91,7 +90,7 @@
         android:layout_width="120sp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/food_button"
+        android:layout_alignStart="@+id/day_breakdown_btn"
         android:layout_marginTop="184dp"
         android:text="Add Food" />
 
@@ -99,7 +98,16 @@
         android:id="@+id/add_activity_btn"
         android:layout_width="120sp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/food_button"
+        android:layout_alignEnd="@+id/day_breakdown_btn"
         android:layout_alignTop="@+id/add_food_btn"
         android:text="Add Activity" />
+
+    <Button
+        android:id="@+id/records_btn"
+        android:layout_width="234dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:text="Records" />
 </RelativeLayout>
