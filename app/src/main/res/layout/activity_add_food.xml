@@ -10,10 +10,51 @@
         android:id="@+id/eat_food_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp"
+        android:layout_marginBottom="86dp"
         android:text="Add Food"
         tools:layout_editor_absoluteX="147dp"
         tools:layout_editor_absoluteY="106dp" />
+
+    <TextView
+        android:id="@+id/add_act_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="97dp"
+        android:text="Food name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/add_food_name_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/add_act_name_tv"
+        android:layout_toEndOf="@+id/add_act_name_tv"
+        android:ems="10"
+        android:hint="name..."
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/add_act_calories_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/add_act_name_tv"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="172dp"
+        android:text="Calories"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/add_food_calories_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/add_act_calories_tv"
+        android:layout_toEndOf="@+id/add_act_name_tv"
+        android:ems="10"
+        android:hint="calories..."
+        android:inputType="textPersonName|number" />
 </RelativeLayout>

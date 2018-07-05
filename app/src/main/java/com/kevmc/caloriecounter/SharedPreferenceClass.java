@@ -47,6 +47,74 @@ public class SharedPreferenceClass {
     protected static final String TODAY_ALLOWANCE_SHARED_PREF_NAME = "USER_DAY_ALLOWANCE";
     protected static final String TODAY_ALLOWANCE_SHARED_PREF_KEY = "USER_DAY_ALLOWANCE_KEY";
 
+    protected static final String DAY_FOOD_ITEM_NAME = "DAY_FOOD_ITEM";
+    protected static final String DAY_FOOD_ITEM_KEY = "DAY_FOOD_ITEM_KEY";
+
+    protected static final String DAY_ACTIVITY_ITEM_NAME = "DAY_ACTIVITY_ITEM";
+    protected static final String DAY_ACTIVITY_ITEM_KEY = "DAY_ACTIVITY_ITEM_KEY";
+
+    protected static final String SHARED_PREF_FOOD_COUNT_NAME = "FOOD_COUNT";
+    protected static final String SHARED_PREF_FOOD_COUNT_KEY = "FOOD_COUNT_KEY";
+
+    protected static final String SHARED_PREF_ACT_COUNT_NAME = "ACTIVITY_COUNT";
+    protected static final String SHARED_PREF_ACT_COUNT_KEY = "ACTIVITY_COUNT_KEY";
+
+    protected void saveActCount(Context context, int count){
+        mSharedPreferences = context.getSharedPreferences(SHARED_PREF_ACT_COUNT_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putInt(SHARED_PREF_ACT_COUNT_KEY, count);
+        editor.commit();
+    }
+
+    protected int getActCount(Context context){
+        int count;
+        mSharedPreferences = context.getSharedPreferences(SHARED_PREF_ACT_COUNT_NAME, Context.MODE_PRIVATE);
+        count = mSharedPreferences.getInt(SHARED_PREF_ACT_COUNT_KEY, 1);
+        return count;
+    }
+
+    protected void saveFoodCount(Context context, int count){
+        mSharedPreferences = context.getSharedPreferences(SHARED_PREF_FOOD_COUNT_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putInt(SHARED_PREF_FOOD_COUNT_KEY, count);
+        editor.commit();
+    }
+
+    protected int getFoodCount(Context context){
+        int count;
+        mSharedPreferences = context.getSharedPreferences(SHARED_PREF_FOOD_COUNT_NAME, Context.MODE_PRIVATE);
+        count = mSharedPreferences.getInt(SHARED_PREF_FOOD_COUNT_KEY, 1);
+        return count;
+    }
+
+    protected void saveFoodItem(Context context, String item, int number){
+        mSharedPreferences = context.getSharedPreferences(DAY_FOOD_ITEM_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putString(DAY_FOOD_ITEM_KEY+number, item);
+        editor.commit();
+    }
+
+    protected String getFoodItem(Context context, int number){
+        String item;
+        mSharedPreferences = context.getSharedPreferences(DAY_FOOD_ITEM_NAME, Context.MODE_PRIVATE);
+        item = mSharedPreferences.getString(DAY_FOOD_ITEM_KEY+number, null);
+        return item;
+    }
+
+    protected void saveActivityItem(Context context, String item, int number){
+        mSharedPreferences = context.getSharedPreferences(DAY_ACTIVITY_ITEM_NAME, Context.MODE_PRIVATE);
+        editor = mSharedPreferences.edit();
+        editor.putString(DAY_ACTIVITY_ITEM_KEY+number, item);
+        editor.commit();
+    }
+
+    protected String getActivityItem(Context context, int number){
+        String item;
+        mSharedPreferences = context.getSharedPreferences(DAY_ACTIVITY_ITEM_NAME, Context.MODE_PRIVATE);
+        item = mSharedPreferences.getString(DAY_ACTIVITY_ITEM_KEY+number, null);
+        return item;
+    }
+
 
     public SharedPreferenceClass(){
         super();

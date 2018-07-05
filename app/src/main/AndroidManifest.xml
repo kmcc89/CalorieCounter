@@ -18,36 +18,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterCredentials" />
         <activity android:name=".RegisterPersonalDetails" />
-
         <activity
             android:name=".HomePage"
-            android:noHistory="true"/>
-
+            android:noHistory="true" />
         <activity android:name=".CalorieCounter" />
         <activity android:name=".FoodMain" />
         <activity android:name=".ActivitiesMain" />
-
         <activity
             android:name=".ResourcesMain"
             android:parentActivityName=".HomePage" />
-
         <activity
             android:name=".UserAccount"
-            android:parentActivityName=".HomePage"/>
-
+            android:parentActivityName=".HomePage" />
         <activity android:name=".EditUserDetails" />
-
         <activity
             android:name=".AddFood"
             android:parentActivityName=".HomePage" />
-
         <activity
             android:name=".AddActivity"
-            android:parentActivityName=".HomePage"></activity>
+            android:parentActivityName=".HomePage" />
+        <activity android:name=".DayBreakdown"></activity>
     </application>
 
 </manifest>
