@@ -74,10 +74,11 @@ public class User {
         this.activityLevel = activityLevel;
     }
 
-    public void calculateBMR(){
+    //66.5 + (13.75 x weight kg) + (5.003 * height cm) - (6.755 * age years) men
+    //655.1 + (9.563 * weight kg) + (1.850 * height cm) - (4.676 * age years) women
 
-        //66.5 + (13.75 x weight kg) + (5.003 * height cm) - (6.755 * age years) men
-        //655.1 + (9.563 * weight kg) + (1.850 * height cm) - (4.676 * age years) women
+
+    public void calculateBMR(){
 
         if(isMale == true){
 

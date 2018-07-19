@@ -53,7 +53,7 @@ public class AddFood extends AppCompatActivity {
                 calsConsumed = Float.valueOf(foodCaloriesEt.getText().toString());
                 allowance = allowance - calsConsumed;
 
-                foodString = String.valueOf(foodCounter) + " " + currentDateTimeString + " " + name + " " +String.valueOf(calsConsumed);
+                foodString = String.valueOf(foodCounter) + " Time: " + currentDateTimeString + " Name:" + name + " Cals:" +String.valueOf(calsConsumed);
 
                 sharedPreferenceClass.saveFoodItem(context, foodString, foodCounter);
 

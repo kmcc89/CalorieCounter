@@ -107,6 +107,7 @@ public class HomePage extends AppCompatActivity {
                 //Save new allowance value and display it on screen
                 sharedPreferenceClass.saveSharedPrefTodayAllowance(context, todaysAllowance);
                 calorieAllowanceDisplay.setText(String.valueOf(todaysAllowance));
+
             }
         });
 
@@ -133,6 +134,14 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent add_activity_intent = new Intent(HomePage.this, AddActivity.class);
                 startActivity(add_activity_intent);
+            }
+        });
+
+        dayBreakdownBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent breakdown_intent = new Intent(HomePage.this, DayBreakdown.class);
+                startActivity(breakdown_intent);
             }
         });
 
@@ -178,17 +187,17 @@ public class HomePage extends AppCompatActivity {
 
         }else if(id == R.id.calorie_counter){
 
-            Intent calorie_counter = new Intent(HomePage.this, CalorieCounter.class);
+            Intent calorie_counter = new Intent(HomePage.this, AddFood.class);
             startActivity(calorie_counter);
 
         }else if(id == R.id.food){
 
-            Intent food_section = new Intent(HomePage.this, FoodMain.class);
+            Intent food_section = new Intent(HomePage.this, AddActivity.class);
             startActivity(food_section);
 
         }else if(id == R.id.activities){
 
-            Intent activity_section = new Intent(HomePage.this, ActivitiesMain.class);
+            Intent activity_section = new Intent(HomePage.this, DayBreakdown.class);
             startActivity(activity_section);
 
         }else if(id == R.id.resources){

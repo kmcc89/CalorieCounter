@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kevmc.caloriecounter">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -40,7 +42,10 @@
         <activity
             android:name=".AddActivity"
             android:parentActivityName=".HomePage" />
-        <activity android:name=".DayBreakdown"></activity>
+        <activity
+            android:name=".DayBreakdown"
+            android:parentActivityName=".HomePage" />
+        <activity android:name=".BlankActivity"></activity>
     </application>
 
 </manifest>

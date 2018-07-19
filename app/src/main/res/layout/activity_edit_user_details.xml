@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13sp"
-        android:text="TextView" />
+        android:text="Edit Details Page" />
 
     <TextView
         android:id="@+id/edit_welcome_msg_tv"

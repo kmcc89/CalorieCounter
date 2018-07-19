@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 public class ResourcesMain extends AppCompatActivity {
 
-    Spanned tx1, tx2, tx3, tx4, tx5, tx6, tx7, tx8, tx9, tx10;
-    TextView hyperLink1, hyperLink2, hyperLink3, hyperLink4, hyperLink5, hyperLink6, hyperLink7, hyperLink8, hyperLink9, hyperLink10;
+    private Spanned tx1, tx2, tx3, tx4, tx5, tx6, tx7, tx8, tx9, tx10;
+    private TextView hyperLink1, hyperLink2, hyperLink3, hyperLink4, hyperLink5, hyperLink6, hyperLink7, hyperLink8, hyperLink9, hyperLink10;
 
 
     @Override
@@ -21,7 +21,6 @@ public class ResourcesMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources_main);
 
-        hyperLink1 = (TextView)findViewById(R.id.resourceLink1);
         tx1 = Html.fromHtml(getString(R.string.Resource_Link_BBC_GoodFood)+
                 getString(R.string.Resource_Link_Description_BBC_GoodFood));
         hyperLink1.setMovementMethod(LinkMovementMethod.getInstance());
@@ -108,17 +107,17 @@ public class ResourcesMain extends AppCompatActivity {
 
         }else if(id == R.id.calorie_counter){
 
-            Intent calorie_counter = new Intent(ResourcesMain.this, CalorieCounter.class);
+            Intent calorie_counter = new Intent(ResourcesMain.this, AddFood.class);
             startActivity(calorie_counter);
 
         }else if(id == R.id.food){
 
-            Intent food_section = new Intent(ResourcesMain.this, FoodMain.class);
+            Intent food_section = new Intent(ResourcesMain.this, AddActivity.class);
             startActivity(food_section);
 
         }else if(id == R.id.activities){
 
-            Intent activity_section = new Intent(ResourcesMain.this, ActivitiesMain.class);
+            Intent activity_section = new Intent(ResourcesMain.this, DayBreakdown.class);
             startActivity(activity_section);
 
         }else if(id == R.id.resources){
